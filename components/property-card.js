@@ -1,37 +1,12 @@
-import { useMemo } from "react";
-
-const PropertyCard = ({
-  imageDimensions,
-  imageDimensionIds,
-  imageDimensionValues,
-  imageDimensionIdsAndValue,
-  imageDimensionIdsAndValue2,
-  imageDimensionIdsAndValue3,
-  imageDimensionIdsAndValue4,
-  imageDimensionIdsAndValue5,
-  propWidth,
-  propFlex,
-  propMinWidth,
-  propMaxWidth,
-}) => {
-  const card1Style = useMemo(() => {
-    return {
-      width: propWidth,
-      flex: propFlex,
-      minWidth: propMinWidth,
-      maxWidth: propMaxWidth,
-    };
-  }, [propWidth, propFlex, propMinWidth, propMaxWidth]);
-
+const PropertyCard = ({ imgUrl, name, price}) => {
   return (
     <div
       className="rounded-3xs bg-gray-white box-border w-[350px] h-[466.99px] flex flex-col py-[15px] px-[13px] items-start justify-start gap-[23px] text-left text-[14.51px] text-gray-700 font-body-regular-600 border-[1px] border-solid border-whitesmoke-100 hover:bg-gainsboro hover:cursor-pointer sm:w-[100%!important] sm:mb-5"
-      style={card1Style}
     >
       <img
         className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
         alt=""
-        src={imageDimensions}
+        src={imgUrl}
       />
       <div className="self-stretch flex flex-row p-2.5 items-start justify-start">
         <div className="flex-1 relative leading-[20.32px] font-medium">
@@ -48,7 +23,7 @@ const PropertyCard = ({
           <img
             className="relative w-[17.42px] h-[17.42px]"
             alt=""
-            src={imageDimensionIds}
+            src="/car.svg"
           />
           <div className="relative leading-[16.27px] font-medium">4</div>
         </div>
@@ -56,7 +31,7 @@ const PropertyCard = ({
           <img
             className="relative w-[17.42px] h-[17.42px]"
             alt=""
-            src={imageDimensionValues}
+            src="/bathhub.svg"
           />
           <div className="relative leading-[16.27px] font-medium">4</div>
         </div>
@@ -64,7 +39,7 @@ const PropertyCard = ({
           <img
             className="relative w-[17.42px] h-[17.42px]"
             alt=""
-            src={imageDimensionIdsAndValue}
+            src="/arrowsout.svg"
           />
           <div className="relative leading-[16.27px] font-medium">
             2,096.00 ft
@@ -76,7 +51,7 @@ const PropertyCard = ({
           <img
             className="relative rounded-[50%] w-[27.57px] h-[27.57px] object-cover"
             alt=""
-            src={imageDimensionIdsAndValue2}
+            src="ellipse-1@2x.png"
           />
           <div className="relative leading-[17.42px] font-medium">
             Jenny Wilson
@@ -87,21 +62,21 @@ const PropertyCard = ({
             <img
               className="relative w-[14.51px] h-[14.51px]"
               alt=""
-              src={imageDimensionIdsAndValue3}
+              src="/bathhub.svg"
             />
           </div>
           <div className="rounded-[1.45px] bg-primary-50 flex flex-row p-[2.902620315551758px] items-start justify-start">
             <img
               className="relative w-[14.51px] h-[14.51px]"
               alt=""
-              src={imageDimensionIdsAndValue4}
+              src="/bathhub.svg"
             />
           </div>
           <div className="rounded-[1.45px] bg-primary-50 flex flex-row p-[2.902620315551758px] items-start justify-start">
             <img
               className="relative w-[14.51px] h-[14.51px]"
               alt=""
-              src={imageDimensionIdsAndValue5}
+              src="/bathhub.svg"
             />
           </div>
         </div>
